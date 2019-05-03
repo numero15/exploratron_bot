@@ -12,7 +12,7 @@ var T = new Twit(config);
 var http = require("http");
 var url = require("url");
 var path = require("path");
-var ServerIP = '127.0.0.1',
+var ServerIP = /*'127.0.0.1'*/'nathanaeltardif.com',
     port = '8080';
 
 var Server = http.createServer(
