@@ -1,4 +1,4 @@
-/*var fs = require('fs'),
+var fs = require('fs'),
     path = require('path'),
     Twit = require('twit'),
     config = require(path.join(__dirname, 'config.js'));
@@ -53,7 +53,7 @@ function tweet(contenu) {
 		}
 	);
 }
-*/
+
 
 // tuto AJAX
 const express = require('express');
