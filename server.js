@@ -1,4 +1,4 @@
-var fs = require('fs'),
+/*var fs = require('fs'),
     path = require('path'),
     Twit = require('twit'),
     config = require(path.join(__dirname, 'config.js'));
@@ -12,7 +12,7 @@ var T = new Twit(config);
 var http = require("http");
 var url = require("url");
 var path = require("path");
-var ServerIP = /*'127.0.0.1'*/'nathanaeltardif.com',
+var ServerIP = 'nathanaeltardif.com',
     port = '8080';
 
 var Server = http.createServer(
@@ -53,7 +53,7 @@ function tweet(contenu) {
 		}
 	);
 }
-
+*/
 
 // tuto AJAX
 const express = require('express');
