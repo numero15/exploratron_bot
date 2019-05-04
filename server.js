@@ -68,7 +68,7 @@ app.get(`/`, (req, res)=>{
 })
 
 app.post('/test', (req, res) => {
-  console.log(req);
+  console.log(req.body);
 
   setTimeout(()=>{
     console.log('Get imagesURL successful');
