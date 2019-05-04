@@ -53,3 +53,25 @@ function tweet(contenu) {
 		}
 	);
 }
+
+
+// tuto AJAX
+const express = require('express');
+const app = express();
+app.listen(process.env.PORT ||3000, () => {
+  console.log('Connected!');
+})
+
+
+app.get(`/`, (req, res)=>{
+  res.send('Hello');
+})
+
+app.post('/test', (req, res) => {
+  console.log("i'm taked");
+
+  setTimeout(()=>{
+    console.log('Get imagesURL successful');
+    res.send('feedback');
+  },2000)
+})
