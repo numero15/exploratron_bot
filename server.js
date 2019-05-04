@@ -57,7 +57,13 @@ function tweet(contenu) {
 
 // tuto AJAX
 const express = require('express');
+const bodyParser = require("body-parser");
 const app = express();
+
+//Here we are configuring express to use body-parser as middle-ware.
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
 app.listen(process.env.PORT ||3000, () => {
   console.log('Connected!');
 })
@@ -68,7 +74,7 @@ app.get(`/`, (req, res)=>{
 })
 
 app.post('/test', (req, res) => {
-  console.log(req);
+  console.log(req.body);
 
   setTimeout(()=>{
     console.log('Get imagesURL successful');
