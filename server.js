@@ -41,7 +41,7 @@ Server.listen(port, ServerIP, function () {
 function tweet(contenu) {
 	console.log("tweeting");
 	var params = {
-		status: contenu
+		status: 'contenu'
 	};
 	T.post(
 		'statuses/update', 
