@@ -36,7 +36,7 @@ Server.listen(port, ServerIP, function () {
 
 
 
-
+*/
 //Tweet functions
 function tweet(contenu) {
 	console.log("tweeting");
@@ -50,9 +50,9 @@ function tweet(contenu) {
 		    console.log(data)
 		}
 	);
-}*/
+}
 
-function tweet(msg) {
+/*function tweet(msg) {
     var tweet = {
         status: msg
     }
@@ -63,7 +63,7 @@ function tweet(msg) {
             console.log(data);
         }
     });
-}
+}*/
 
 
 // tuto AJAX
