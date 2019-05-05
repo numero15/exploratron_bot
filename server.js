@@ -41,7 +41,7 @@ Server.listen(port, ServerIP, function () {
 function tweet(contenu) {
 	console.log("tweeting");
 	var params = {
-		status: 'contenu'
+		status: contenu
 	};
 	T.post(
 		'statuses/update', 
@@ -85,8 +85,8 @@ app.get(`/`, (req, res)=>{
 })
 
 app.post('/test', (req, res) => {
-  console.log(req.body);
-  tweet(req.body);
+  console.log(req.body.tweet);
+  tweet(req.body.tweet);
 
   setTimeout(()=>{
     console.log('Get imagesURL successful');
