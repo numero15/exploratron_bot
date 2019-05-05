@@ -1,5 +1,5 @@
 var Twit = require('twit'),
-    config = require('./config.js'));
+    config = require('./config.js');
 
 //Accès vers twitter
 var T = new Twit(config);
