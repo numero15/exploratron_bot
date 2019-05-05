@@ -1,7 +1,5 @@
-var fs = require('fs'),
-    path = require('path'),
-    Twit = require('twit'),
-    config = require(path.join(__dirname, 'config.js'));
+var Twit = require('twit'),
+    config = require('./config.js'));
 
 //Accès vers twitter
 var T = new Twit(config);
@@ -9,7 +7,7 @@ var T = new Twit(config);
 
 
 //Setup communication
-var http = require("http");
+/*var http = require("http");
 var url = require("url");
 var path = require("path");
 var ServerIP = 'nathanaeltardif.com',
@@ -52,6 +50,19 @@ function tweet(contenu) {
 		    console.log(data)
 		}
 	);
+}*/
+
+function tweet(msg) {
+    var tweet = {
+        status: msg
+    }
+    T.post('statuses/update', tweet, function(err, data) {
+        if (err) {
+            console.log(err);
+        } else {
+            console.log(data);
+        }
+    });
 }
 
 
@@ -75,6 +86,7 @@ app.get(`/`, (req, res)=>{
 
 app.post('/test', (req, res) => {
   console.log(req.body);
+  tweet(req.body);
 
   setTimeout(()=>{
     console.log('Get imagesURL successful');
