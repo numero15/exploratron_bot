@@ -85,7 +85,7 @@ app.get(`/`, (req, res)=>{
 })
 
 app.post('/test', (req, res) => {
-  console.log(req.body.tweet);
+  console.log(req.body);
   tweet(req.body.tweet);
 
   setTimeout(()=>{
